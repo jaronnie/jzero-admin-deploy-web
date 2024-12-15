@@ -39,7 +39,7 @@ resources:
         command:
           - nginx
           - "-c"
-          - "/nginx.conf"
+          - "/usr/share/nginx/nginx.conf"
           - "-g"
           - "daemon off;"
         port: 9000
