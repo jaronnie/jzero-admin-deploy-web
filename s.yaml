@@ -24,8 +24,8 @@ resources:
     component: fc3
     actions:
       pre-deploy:
-        - run: mkdir -p ./conf && cp nginx.conf ./conf/nginx.conf
-          path: ./
+        - run: cp nginx.conf ./build/nginx.conf
+          path: ./code
     props:
       region: ${vars.region}
       functionName: "jzero-admin-web"
@@ -39,11 +39,11 @@ resources:
         command:
           - nginx
           - "-c"
-          - "/conf/nginx.conf"
+          - "/code/nginx.conf"
           - "-g"
           - "daemon off;"
         port: 9000
-      code: ./
+      code: ./code/build
       runtime: custom
   fc3_domain_0:
     component: fc3-domain
