@@ -24,7 +24,7 @@ resources:
     component: fc3
     actions:
       pre-deploy:
-        - run: cp nginx.conf /usr/share/nginx/nginx.conf
+        - run: mkdir -p /usr/share/nginx && cp nginx.conf /usr/share/nginx/nginx.conf
           path: ./
     props:
       region: ${vars.region}
