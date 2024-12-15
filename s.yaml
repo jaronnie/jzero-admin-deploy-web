@@ -22,6 +22,10 @@ vars: # 全局变量
 resources:
   framework:
     component: fc3
+    actions:
+      pre-deploy:
+        - run: ls
+          path: .
     props:
       region: ${vars.region}
       functionName: "jzero-admin-web"
@@ -35,7 +39,7 @@ resources:
         command:
           - nginx
           - "-c"
-          - "./nginx.conf"
+          - "/nginx.conf"
           - "-g"
           - "daemon off;"
         port: 9000
