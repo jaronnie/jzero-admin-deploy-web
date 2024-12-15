@@ -35,7 +35,7 @@ resources:
         command:
           - nginx
           - "-c"
-          - "nginx.conf"
+          - "./nginx.conf"
           - "-g"
           - "daemon off;"
         port: 9000
