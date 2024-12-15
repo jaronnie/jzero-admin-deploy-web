@@ -39,7 +39,7 @@ resources:
           - "-g"
           - "daemon off;"
         port: 9000
-      code: ./dist
+      code: .
       runtime: custom
   fc3_domain_0:
     component: fc3-domain
