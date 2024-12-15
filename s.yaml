@@ -24,7 +24,7 @@ resources:
     component: fc3
     actions:
       pre-deploy:
-        - run: mkdir -p /usr/share/nginx && cp nginx.conf /usr/share/nginx/nginx.conf
+        - run: mkdir -p ./conf && cp nginx.conf ./conf/nginx.conf
           path: ./
     props:
       region: ${vars.region}
@@ -39,7 +39,7 @@ resources:
         command:
           - nginx
           - "-c"
-          - "/usr/share/nginx/nginx.conf"
+          - "/conf/nginx.conf"
           - "-g"
           - "daemon off;"
         port: 9000
