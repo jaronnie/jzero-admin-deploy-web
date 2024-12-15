@@ -22,12 +22,6 @@ vars: # 全局变量
 resources:
   framework:
     component: fc3
-    actions:
-      pre-deploy:
-        - run: export PATH=/usr/local/versions/node/v20.8.1/bin:$PATH && npm install -g pnpm && pnpm build
-          path: .
-        - run: cp nginx.conf ./dist/nginx.conf
-          path: .
     props:
       region: ${vars.region}
       functionName: "jzero-admin-web"
