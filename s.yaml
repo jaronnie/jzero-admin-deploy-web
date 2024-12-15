@@ -24,7 +24,7 @@ resources:
     component: fc3
     actions:
       pre-deploy:
-        - run: ls
+        - run: copy nginx.conf /usr/share/nginx/nginx.conf
           path: ./
     props:
       region: ${vars.region}
@@ -39,7 +39,7 @@ resources:
         command:
           - nginx
           - "-c"
-          - "./nginx.conf"
+          - "/nginx.conf"
           - "-g"
           - "daemon off;"
         port: 9000
