@@ -25,7 +25,7 @@ resources:
     actions:
       pre-deploy:
         - run: ls
-          path: .
+          path: ./
     props:
       region: ${vars.region}
       functionName: "jzero-admin-web"
