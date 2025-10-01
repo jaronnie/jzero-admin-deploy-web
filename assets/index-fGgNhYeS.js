@@ -1,0 +1,1 @@
+import{_ as o}from"./look-forward.vue_vue_type_script_setup_true_lang-DNx4PnMy.js";import{d as n,c as r,o as t}from"./index-BD1rs9i0.js";const p=n({name:"user-center",__name:"index",setup(a){return(c,_)=>{const e=o;return t(),r(e)}}});export{p as default};
